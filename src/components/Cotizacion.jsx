@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const ResultadoDiv = styled.div`
     color: #fff;
@@ -35,6 +36,10 @@ const Cotizacion = ({resultado}) => {
             <Info>Última actualización: <span>{resultado.LASTUPDATE}</span></Info>
         </ResultadoDiv>
     )
+}
+
+Cotizacion.propTypes = {
+    resultado: PropTypes.object.isRequired
 }
 
 export default Cotizacion;

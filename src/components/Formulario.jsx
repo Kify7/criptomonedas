@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Error from './Error'
 import useMoneda from "../hooks/useMoneda";
 import useCriptomoneda from "../hooks/useCriptomoneda";
+import PropTypes from 'prop-types';
 import axios from "axios";
 
 const Boton = styled.input`
@@ -84,5 +85,10 @@ const Formulario = ({guardarMoneda, guardarCriptomoneda}) => {
     </form>
   );
 };
+
+Formulario.propTypes = {
+  guardarMoneda: PropTypes.func.isRequired,
+  guardarCriptomoneda: PropTypes.func.isRequired
+}
 
 export default Formulario;
